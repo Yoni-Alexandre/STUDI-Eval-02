@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>B.R.O. Dice - Jeu de dés</title>
+  <!-- --------- -->
+  <!-- BOOTSTRAP -->
+  <!-- --------- -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <!-- ------------ -->
+  <!-- GOOGLE FONTS -->
+  <!-- ------------ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;900&display=swap" rel="stylesheet">
+  <!-- ---------------- -->
+  <!-- FEUILLE DE STYLE -->
+  <!-- ---------------- -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- MAIN -->
+  <main class="principale">
+    <div class="container">
+      <!-- ------------------------- -->
+      <!-- SECTION - NOUVELLE PARTIE -->
+      <!-- ------------------------- -->
+      <section class="n-partie">
+        <div class="n-partie_btn-image">
+          <img src="images/BRO-DICE_Logo.png" alt="Logo pour lancer une nouvelle partie">
+          <button class="btn btn-success btn-nouvelle-partie" type="button">Nouvelle partie</button>
+        </div>
+      </section>
+
+      <!-- ------------------------------------------- -->
+      <!-- SECTION - Joueurs gagnant boite de dialogue -->
+      <!-- ------------------------------------------- -->
+      <section id="boite-de-dialogue">
+          <!-- <p>Bravo! Vous avez gagné</p> -->
+          <img src="images/BRO-DICE_gagnant.png">
+      </section>
+
+      <!-- ----------------- -->
+      <!-- SECTION - JOUEURS -->
+      <!-- ----------------- -->
+      <section class="joueurs">
+        <div class="joueurs-box-j1 joueur-0 jGagnant jActif">
+          <h2 id="nomJoueur1">JOUEUR 1</h2>
+          <p id="resultat-0">0</p>
+        </div>
+        <div class="joueurs-box-j2 joueur-1 jGagnant jActif">
+          <h2 id="nomJoueur2">JOUEUR 2</h2>
+          <p id="resultat-1">0</p>
+        </div>
+      </section>
+
+      <!-- ------------ -->
+      <!-- SECTION - DÉ -->
+      <!-- ------------ -->
+      <section class="section-de">
+        <img class="img-de" src="images/BRO-DICE_Hold.png" alt="dé à 6 faces">
+      </section>
+
+      <!-- SECTION - EN COURS -->
+      <section class="enCours">
+        <div class="enCours-j1">
+          <h3>En cours</h3>
+          <p id="enCours-0">0</p>
+        </div>
+        <div class="enCours-j2">
+          <h3>En cours</h3>
+          <p id="enCours-1">0</p>
+        </div>
+      </section>
+
+      <!-- ------------------ -->
+      <!-- SECTION - BOUTTONS -->
+      <!-- ------------------ -->
+      <section class="bouttons">
+        <div class="bouttons-retenir">
+          <img src="/images/BRO-DICE_Hold.png" alt="Logo de type passer à l'autre joueur">
+          <button class="btn btn-danger btn-retenir" type="button">Retenir</button>
+        </div>
+
+        <div class="bouttons-lancer ">
+          <img src="images/BRO-DICE_rooldice.png" alt="Logo de type lancer lee dé">
+          <button class="btn btn-primary btn-lancer" type="button">Lancer</button>
+        </div>
+      </section>
+    </div>
+
+    <!-- ------------------------------ -->
+    <!-- SECTION - IMAGES SUR LES COTES -->
+    <!-- ------------------------------ -->
+    <section class="cote-gauche-cache cote-gauche-visible">
+      <img src="images/BRO-DICE_cote-gauche-Tablette-PC.png">
+    </section>
+
+    <section class="cote-gauche-2-cache cote-gauche-2-visible">
+      <img src="images/BRO-DICE_cote-gauche-2-Tablette-PC.png">
+    </section>
+
+    <section class="cote-gauche-3-cache cote-gauche-3-visible">
+      <img src="images/BRO-DICE_cote-gauche-3-Tablette-PC.png">
+    </section>
+
+    <section class="cote-droit-cache cote-droit-visible">
+      <img src="images/BRO-DICE_cote-droit-Tablette-PC.png">
+    </section>
+
+    <section class="cote-droit-2-cache cote-droit-2-visible">
+      <img src="images/BRO-DICE_cote-droit-2-Tablette-PC.png">
+    </section>
+  </main>
+
+  <section class="cote-droit-3-cache cote-droit-3-visible">
+    <img src="images/BRO-DICE_cote-droit-3-Tablette-PC.png">
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

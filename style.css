@@ -1,0 +1,416 @@
+/* --------- */
+/* RESET CSS */
+/* --------- */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  /* background-color: #222; */
+  background: linear-gradient(rgb(54, 43, 112), rgb(173, 25, 25), rgb(3, 7, 75));
+}
+
+h2,
+h3,
+p {
+  font-weight: 300;
+  color: #222;
+}
+
+.principale {
+  /* background: linear-gradient(rgb(243, 223, 227), rgb(55, 55, 126), white); */
+  /* background-color: rgba(245, 18, 18, 0.411); */
+  background-image: url(images/BRO-DICE-Fond.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+/* --------- */
+/* VARIABLES */
+/* --------- */
+
+:root {
+  --ombres: 5px -2px 12px 1px rgba(0, 0, 0, 0.26);
+}
+
+/* ------------------------- */
+/* SECTION - NOUVELLE PARTIE */
+/* ------------------------- */
+
+.n-partie {
+  width: 100%;
+}
+
+.n-partie_btn-image {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.n-partie_btn-image img {
+  padding-bottom: 20px;
+  width: 180px;
+  height: 80px;
+}
+
+/* ------------------------------- */
+/*  DEBUT : EFFET + ANIMATION NEON */
+/* ------------------------------- */
+.img-de {
+  /* Application de filtres */
+  filter:
+    /* dessine autour (png ou svg) */
+    drop-shadow(0 0.15vw 0.30vw #5b56e7) drop-shadow(0 0.15vw 0.30vw #ddda60);
+  /* Animation keyframes*/
+  animation: goku-clignotement 1s infinite alternate;
+}
+
+#boite-de-dialogue {
+  animation: dragon-clignotement 0.5s infinite alternate;
+}
+
+/* Animation img Goku */
+@keyframes goku-clignotement {
+
+  0%,
+  9%,
+  15%,
+  79%,
+  83%,
+  100% {
+    filter:
+      drop-shadow(0 0.15vw 0.30vw #a8aded) drop-shadow(0 0.9vw 0.30vw #152d8d);
+  }
+
+  10%,
+  14%,
+  80%,
+  82% {
+    filter: none;
+  }
+}
+
+/* Animation img dragon */
+@keyframes dragon-clignotement {
+
+  0%,
+  9%,
+  15%,
+  79%,
+  83%,
+  100% {
+    filter:
+      drop-shadow(0 0.15vw 0.30vw #d3c504) drop-shadow(0 0.9vw 0.30vw #0e1a01);
+  }
+
+  10%,
+  14%,
+  80%,
+  82% {
+    filter: none;
+  }
+}
+/* ------------------------------- */
+/*  FIN  :  EFFET + ANIMATION NEON */
+/* ------------------------------- */
+
+/* ------------------------------------------- */
+/* SECTION - BOITE DE DIALOGUE JOUEUR GANGNANT */
+/* ------------------------------------------- */
+#boite-de-dialogue {
+  position: absolute;
+  top: 220px;
+  left: 20px;
+  z-index: 2;
+}
+
+#boite-de-dialogue img {
+  width: 350px;
+}
+
+/* ----------------- */
+/* SECTION - JOUEURS */
+/* ----------------- */
+.joueurs {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.joueurs p {
+  font-size: 40px
+}
+
+.joueurs-box-j1 {
+  width: 45%;
+  background-color: rgb(254, 0, 0);
+  padding: 12px 12px 12px 12px;
+  border: 2px solid black;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: var(--ombres);
+}
+
+.joueurs-box-j2 {
+  width: 45%;
+  background-color: rgba(51, 64, 159, 0.3);
+  padding: 12px 12px 12px 12px;
+  border: 2px solid black;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: var(--ombres);
+}
+
+/* ------------ */
+/* SECTION - DÉ */
+/* ------------ */
+.section-de {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-de img {
+  width: 120px;
+}
+
+/* ------------------ */
+/* SECTION - EN COURS */
+/* ------------------ */
+.enCours {
+  height: 130px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.enCours p {
+  font-size: 40px;
+}
+
+.enCours-j1 {
+  background-color: rgba(255, 254, 254, 0.753);
+  padding: 12px 12px 12px 12px;
+  border: 2px solid black;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: var(--ombres);
+}
+
+.enCours-j2 {
+  background-color: rgba(255, 254, 254, 0.753);
+  padding: 12px 12px 12px 12px;
+  border: 2px solid black;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: var(--ombres);
+}
+
+/* ----------------- */
+/* SECTION - BOUTONS */
+/* ----------------- */
+.bouttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.bouttons-retenir {
+  padding: 30px 0px 80px 0px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.bouttons-lancer {
+  padding: 30px 0px 80px 0px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.bouttons-retenir img {
+  padding-bottom: 10px;
+  width: 50px;
+  height: 60px;
+}
+
+.bouttons-lancer img {
+  padding-bottom: 10px;
+  width: 50px;
+  height: 60px;
+}
+
+/* ------------------------------------------------------- */
+/* POUR JAVASCRIPT : Selection du joueur et joueur gagnant */
+/* ------------------------------------------------------- */
+.JoueurGagnant {
+  background-color: green;
+}
+
+.joueurActif1 {
+  background-color: rgba(255, 0, 0, 0.308);
+}
+
+.joueurActif2 {
+  background-color: rgb(33, 76, 252);
+}
+
+/* ------------------------------ */
+/* SECTION - IMAGES SUR LES COTES */
+/* ------------------------------ */
+.cote-gauche-cache {
+  display: none;
+}
+
+.cote-gauche-2-cache {
+  display: none;
+}
+
+.cote-gauche-3-cache {
+  display: none;
+}
+
+.cote-droit-cache {
+  display: none;
+}
+
+.cote-droit-2-cache {
+  display: none;
+}
+
+.cote-droit-3-cache {
+  display: none;
+}
+
+/* -------------------------- */
+/* RESPONSIVE - TABLETTE - PC */
+/* -------------------------- */
+@media screen and (min-width: 810px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .principale {
+    width: 50%;
+  }
+
+  #boite-de-dialogue {
+    top: 220px;
+    left: 230px;
+  }
+  
+  #boite-de-dialogue img {
+    width: 350px;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  #boite-de-dialogue {
+    top: 235px;
+    left: 350px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .principale {
+    width: 40%;
+  }
+
+  #boite-de-dialogue {
+    top: 250px;
+    left: 750px;
+  }
+  
+  #boite-de-dialogue img {
+    width: 400px;
+  }
+
+  /* ------------------------------ */
+  /* SECTION - IMAGES SUR LES COTES */
+  /* ---------VERSION - PC ---------*/
+  /* ------------------------------ */
+  .cote-gauche-cache {
+    display: block;
+  }
+
+  .cote-gauche-cache img {
+    position: absolute;
+    top: 150px;
+    left: 350px;
+    width: 300px;
+    animation: goku-clignotement 1s infinite alternate;
+  }
+
+  .cote-gauche-2-cache {
+    display: block;
+  }
+
+  .cote-gauche-2-cache img {
+    position: absolute;
+    top: 35px;
+    left: 650px;
+    width: 100px;
+    animation: goku-clignotement 3s infinite alternate;
+  }
+
+  .cote-gauche-3-cache {
+    display: block;
+  }
+
+  .cote-gauche-3-cache img {
+    position: absolute;
+    top: 35px;
+    left: 50px;
+    width: 300px;
+    filter:
+    drop-shadow(0 0.15vw 0.30vw #a8aded) drop-shadow(0 0.9vw 0.30vw #152d8d);
+  }
+
+  .cote-droit-cache {
+    display: block;
+  }
+
+  .cote-droit-cache img {
+    position: absolute;
+    top: 10px;
+    right: 350px;
+    width: 350px;
+    animation: goku-clignotement 2s infinite alternate;
+  }
+
+  .cote-droit-2-cache {
+    display: block;
+  }
+
+  .cote-droit-2-cache img{
+    position: absolute;
+    top: 500px;
+    right: 420px;
+    width: 250px;
+    filter:
+    drop-shadow(0 0.15vw 0.30vw #a8aded) drop-shadow(0 0.9vw 0.30vw #152d8d);
+  }
+
+  .cote-droit-3-cache {
+    display: block;
+  }
+
+  .cote-droit-3-cache img{
+    position: absolute;
+    top: 250px;
+    right: 50px;
+    width: 350px;
+    filter:
+    drop-shadow(0 0.15vw 0.30vw #a8aded) drop-shadow(0 0.9vw 0.30vw #152d8d);
+  }
+}
